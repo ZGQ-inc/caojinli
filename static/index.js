@@ -119,10 +119,10 @@ function gameInit() {
 function gameRestart() {
     _gameBBList = [];
     _gameBBListIndex = 0;
-    _gameScore = 0;
+    _gameScore = 114514;
     _gameOver = false;
     _gameStart = false;
-    _gameTimeNum = 20;
+    _gameTimeNum = 114514;
     GameTimeLayer.innerHTML = creatTimeText(_gameTimeNum);
     countBlockSize();
     refreshGameLayer(GameLayer[0]);
@@ -304,7 +304,7 @@ function showGameScoreLayer() {
     var c = document.getElementById(_gameBBList[_gameBBListIndex - 1].id).className.match(_ttreg)[1];
     l.className = l.className.replace(/bgc\d/, 'bgc' + c);
     document.getElementById('GameScoreLayer-text').innerHTML = shareText(_gameScore);
-    var score_text='得分&nbsp;&nbsp;';
+    var score_text='病情&nbsp;&nbsp;';
     score_text+=deviation_time<23000?_gameScore:"<span style='color:red;'>"+_gameScore+"</span>";
     document.getElementById('GameScoreLayer-score').innerHTML = score_text;
     var bast = cookie('bast-score');
@@ -314,7 +314,7 @@ function showGameScoreLayer() {
             cookie('bast-score', bast, 100);
         }
     }
-    document.getElementById('GameScoreLayer-bast').innerHTML = '最佳&nbsp;&nbsp;' + bast;
+    document.getElementById('GameScoreLayer-bast').innerHTML = '病危&nbsp;&nbsp;' + bast;
     l.style.display = 'block';
 }
 
@@ -408,7 +408,7 @@ function goRank() {
     }
     window.location.href=link;
 }
-console.log("不修改，好嘛？乱传又有什么用呢？(ˉ▽ˉ；)...")
+console.log("不修改，好嘛？乱传又有什么用呢？(ˉ▽ˉ；)...           我就要改！")
 document.onkeydown = function (e) {
     if (e.keyCode == 123) {
         return false
