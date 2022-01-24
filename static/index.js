@@ -119,7 +119,7 @@ function gameInit() {
 function gameRestart() {
     _gameBBList = [];
     _gameBBListIndex = 0;
-    _gameScore = 114514;
+    _gameScore = 0;
     _gameOver = false;
     _gameStart = false;
     _gameTimeNum = 114514;
@@ -381,12 +381,12 @@ document.write(createGameLayer());
 
 
 function show_btn() {
-    document.getElementById("btn_group").style.display = "block"
-    document.getElementById("setting").style.display = "none"
+    document.getElementById("btn_group").style.display = "true"
+    document.getElementById("setting").style.display = "true"
 }
 function show_setting() {
-    document.getElementById("btn_group").style.display = "none"
-    document.getElementById("setting").style.display = "block"
+    document.getElementById("btn_group").style.display = "true"
+    document.getElementById("setting").style.display = "true"
 }
 function save_cookie() {
     cookie('username', document.getElementById("username").value, 100);
